@@ -1,0 +1,39 @@
+@mixin textfieldext-demo {
+  @include valo;
+
+  .v-errormessage + .v-tooltip-text {
+    display: none;
+  }
+  
+  .textfieldext-errormessage {
+  	color: red;
+  	margin-left: 10px;
+  	font-size: 12px;
+  }
+  
+  .v-textfield-validation-label {
+  	color: red;
+  	margin-left: 10px;
+  	font-size: 12px;
+  }
+  
+  .v-tooltip {
+  	display: none;
+  }
+  
+  .v-errorindicator {
+  	display: none;
+  }
+  
+  .v-textfieldext-error .v-textfield:focus {
+  	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	border-color: #ff0000;
+	-webkit-box-shadow: 0 0 0 1px rgba(255, 0, 0, 0.5), none;
+	box-shadow: 0 0 0 1px rgba(255, 0, 0, 0.5), none;
+	-webkit-box-shadow: 0 0 0 1px rgba(255, 0, 0, 0.5);
+	box-shadow: 0 0 0 1px rgba(255, 0, 0, 0.5);
+  }
+}

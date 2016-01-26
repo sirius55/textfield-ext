@@ -1,0 +1,12 @@
+@import "variables";
+@import "textfieldext-demo";
+
+.textfieldext-demo {
+   @include textfieldext-demo;
+}
+
+html {
+	width: 100px;
+	min-width: 100%;
+}
+
