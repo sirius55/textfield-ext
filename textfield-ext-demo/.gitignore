@@ -2,3 +2,7 @@
 ./settings
 .classpath
 .project
+/src/main/webapp/VAADIN/widgetsets
+/src/main/webapp/VAADIN/gwt-unitCache
+/src/main/webapp/VAADIN/themes/textfieldext-demo/styles.css
+/src/main/webapp/VAADIN/themes/valo/styles.css
