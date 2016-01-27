@@ -9,7 +9,7 @@ This is an extended TextField Component, which displays an error message from a 
 
 Usage 
 -----
-```
+```java
 TextFieldExt tf = new TextFieldExt();
 
 tf.addValidator(new StringLengthValidator("validation error !", 2, 3, false));
