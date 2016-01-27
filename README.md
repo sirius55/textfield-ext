@@ -17,10 +17,15 @@ tf.addValidator(new StringLengthValidator("validation error !", 2, 3, false));
 tf.setValidationVisible(false);
 
 layout.addComponent(tf);
+
 try {
+
   tf.validate();
+  
 } catch (Exception e) {
+
 	tf.setValidationVisible(true);
+	
 }
 ```
 
