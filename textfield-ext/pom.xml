@@ -78,7 +78,36 @@
 
 	<build>
 		<outputDirectory>${basedir}/${target.dir}/classes</outputDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/java</directory>
+			</resource>
+		</resources>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -126,7 +155,7 @@
 							<goal>clean</goal>
 							<goal>resources</goal>
 							<goal>update-theme</goal>
-							<goal>update-widgetset</goal>
+							<!-- <goal>update-widgetset</goal> -->
 							<goal>compile-theme</goal>
 							<goal>compile</goal>
 						</goals>
@@ -157,7 +186,7 @@
 											<goal>clean</goal>
 											<goal>resources</goal>
 											<goal>update-theme</goal>
-											<goal>update-widgetset</goal>
+											<!-- <goal>update-widgetset</goal> -->
 											<goal>compile-theme</goal>
 											<goal>compile</goal>
 										</goals>

@@ -158,11 +158,8 @@
 						<configuration>
 						</configuration>
 						<goals>
-							<goal>clean</goal>
 							<goal>resources</goal>
-							<goal>update-theme</goal>
-							<goal>update-widgetset</goal>
-							<goal>compile-theme</goal>
+							<!-- <goal>update-widgetset</goal> -->
 							<goal>compile</goal>
 						</goals>
 					</execution>
@@ -189,12 +186,11 @@
 											[7.0.0,)
 										</versionRange>
 										<goals>
-											<goal>clean</goal>
 											<goal>resources</goal>
-											<goal>update-theme</goal>
-											<goal>update-widgetset</goal>
-											<goal>compile-theme</goal>
+											<!-- <goal>update-widgetset</goal> -->
 											<goal>compile</goal>
+											<goal>update-theme</goal>
+											<goal>compile-theme</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
