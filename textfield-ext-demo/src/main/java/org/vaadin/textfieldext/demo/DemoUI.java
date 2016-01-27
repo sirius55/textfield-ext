@@ -37,23 +37,29 @@ public class DemoUI extends UI {
 	protected void init(VaadinRequest request) {
 		
 		VerticalLayout layout = new VerticalLayout();
+		
+		final VerticalLayout layoutName = new VerticalLayout();
+		layoutName.setSizeFull();
+		
+		final VerticalLayout layoutEmail = new VerticalLayout();
+		layoutEmail.setSizeFull();
+		
+		TextFieldExt firstName = new TextFieldExt();
+		TextFieldExt email = new TextFieldExt();
+		TextFieldExt lastName = new TextFieldExt();
 
+		
 		// Name Layout
 		final PropertysetItem itemName = new PropertysetItem();
 		final FieldGroup fieldGroupName = new FieldGroup(itemName);
 		itemName.addItemProperty("firstname", new ObjectProperty<String>(""));
 		itemName.addItemProperty("lastname", new ObjectProperty<String>(""));
 
-		final VerticalLayout layoutName = new VerticalLayout();
-		layoutName.setSizeFull();
-
-		TextFieldExt firstName = new TextFieldExt();
 		firstName.setCaption("First Name: ");
 		firstName.addValidator(new StringLengthValidator("First name must be 2-5 chars.", 2, 5, false));
 		firstName.setValidationVisible(false);
 		fieldGroupName.bind(firstName, "firstname");
-
-		TextFieldExt lastName = new TextFieldExt();
+		
 		lastName.setCaption("Last Name: ");
 		lastName.addValidator(new StringLengthValidator("Last name must be 3-6 chars.", 2, 5, false));
 		lastName.setValidationVisible(false);
@@ -85,6 +91,7 @@ public class DemoUI extends UI {
 				} catch (CommitException e) {
 					firstName.setValidationVisible(true);
 					lastName.setValidationVisible(true);
+					email.setValidationVisible(false);
 				}
 			}
 		});
@@ -93,18 +100,15 @@ public class DemoUI extends UI {
 		label.addStyleName("h4");
 		layout.addComponent(label);
 
+		
 		// Email Layout
 		final PropertysetItem itemEmail = new PropertysetItem();
 		final FieldGroup fieldGroupEmail = new FieldGroup(itemEmail);
 		itemEmail.addItemProperty("email", new ObjectProperty<String>(""));
 
-		final VerticalLayout layoutEmail = new VerticalLayout();
-		layoutEmail.setSizeFull();
-
 		Panel panelEmail = new Panel();
 		panelEmail.setWidth("480px");
 		
-		TextFieldExt email = new TextFieldExt();
 		email.setCaption("Email: ");
 		email.addValidator(new EmailValidator("Email is not valid."));
 		email.setValidationVisible(false);
@@ -131,6 +135,8 @@ public class DemoUI extends UI {
 					fieldGroupEmail.commit();
 				} catch (CommitException e) {
 					email.setValidationVisible(true);
+					firstName.setValidationVisible(false);
+					lastName.setValidationVisible(false);
 				}
 			}
 		});
