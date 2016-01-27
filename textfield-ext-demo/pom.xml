@@ -109,12 +109,12 @@
 				<version>3.0.0</version>
 				<configuration>
 					<filesets>
-						<!-- <fileset> -->
-						<!-- <directory>src/main/webapp/VAADIN/widgetsets</directory> -->
-						<!-- </fileset> -->
-						<!-- <fileset> -->
-						<!-- <directory>src/main/webapp/VAADIN/gwt-unitCache</directory> -->
-						<!-- </fileset> -->
+						<fileset>
+							<directory>src/main/webapp/VAADIN/widgetsets</directory>
+						</fileset>
+						<fileset>
+							<directory>src/main/webapp/VAADIN/gwt-unitCache</directory>
+						</fileset>
 					</filesets>
 				</configuration>
 			</plugin>
@@ -158,9 +158,12 @@
 						<configuration>
 						</configuration>
 						<goals>
-							<!-- <goal>resources</goal> -->
-							<!-- <goal>update-widgetset</goal> -->
-							<!-- <goal>compile</goal> -->
+							<goal>clean</goal>
+							<goal>resources</goal>
+							<goal>update-theme</goal>
+							<goal>update-widgetset</goal>
+							<goal>compile-theme</goal>
+							<goal>compile</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -168,8 +171,7 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -187,9 +189,12 @@
 											[7.0.0,)
 										</versionRange>
 										<goals>
-											<!-- <goal>resources</goal> -->
+											<goal>clean</goal>
+											<goal>resources</goal>
+											<goal>update-theme</goal>
 											<goal>update-widgetset</goal>
-											<!-- <goal>compile</goal> -->
+											<goal>compile-theme</goal>
+											<goal>compile</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
