@@ -22,10 +22,19 @@ public class TextFieldExt extends AbstractField<String> {
 	}
 
 	@Override
-	public void setValue(String newFieldValue) throws ReadOnlyException, ConversionException {
+	public void setValue(String newFieldValue)  {
 		super.setValue(newFieldValue);
 
 		getState().text = newFieldValue;
+	}
+	
+	@Override
+	public String getValue() {
+		return getState().text;
+	}
+	@Override
+	protected void doSetValue(String value) {
+		setValue(value);
 	}
 
 	@Override
