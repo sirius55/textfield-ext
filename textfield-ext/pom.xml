@@ -5,12 +5,12 @@
 	<groupId>org.vaadin</groupId>
 	<artifactId>textfield-ext</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1</version>
+	<version>1.1</version>
 	<name>TextField With Validation Error Label Add On</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<vaadin.version>7.6.1</vaadin.version>
+		<vaadin.version>8.1.1</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 
 		<Implementation-Version>${project.version}</Implementation-Version>
@@ -85,6 +85,21 @@
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-themes</artifactId>
 			<version>${vaadin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-shared</artifactId>
+			<version>${vaadin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.10.3</version>
 		</dependency>
 	</dependencies>
 
